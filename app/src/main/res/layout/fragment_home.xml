@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:colorBackground">
+
+<!--    <androidx.core.widget.NestedScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:overScrollMode="never">-->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/search_lay"
+                android:layout_alignParentTop="true"
+                android:background="@color/colorPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize">
+
+                <TextView
+                    android:layout_margin="10dp"
+                    android:background="@drawable/rounded_shape"
+                    android:text="Search your product ..."
+                    android:textAlignment="center"
+                     android:paddingTop="8dp"
+                    android:foregroundGravity="center_vertical|center_horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_below="@id/search_lay"
+                android:id="@+id/home_top_section"
+                android:layout_margin="10dp"
+                android:background="@drawable/rounded_image_slider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.daimajia.slider.library.SliderLayout
+                    android:id="@+id/imageSlider"
+                    android:layout_margin="0dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@id/home_top_section">
+
+                <RelativeLayout
+                    android:layout_margin="8dp"
+                    android:background="@drawable/rounded_card"
+                    android:padding="4dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/featured_categories_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="Featured Categories"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:layout_width="75dp"
+                        android:layout_height="3dp"
+                        android:layout_alignBottom="@id/featured_categories_text"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/colorPrimary" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/top_categories"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/featured_categories_text"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_margin="8dp"
+                    android:background="@drawable/rounded_card"
+                    android:padding="4dp"
+                    android:id="@+id/flash_deal_section"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/flash_deals_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="Flash Deal"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="20sp" />
+
+<!--                    <View-->
+<!--                        android:layout_width="75dp"-->
+<!--                        android:layout_height="3dp"-->
+<!--                        android:layout_alignBottom="@id/flash_deals_text"-->
+<!--                        android:layout_alignParentRight="true"-->
+<!--                        android:layout_marginRight="10dp"-->
+<!--                        android:layout_marginBottom="10dp"-->
+<!--                        android:background="@color/colorPrimary" />-->
+
+                    <cn.iwgang.countdownview.CountdownView
+                        android:id="@+id/countdown"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/flash_deals_text"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="15dp"
+                        app:isHideTimeBackground="false"
+                        app:timeBgColor="@color/colorPrimaryLight"
+                        app:isShowDay="true"
+                        app:isShowHour="true"
+                        app:isShowMinute="true"
+                        app:isShowSecond="true"
+                        app:timeTextColor="@android:color/white"
+                        app:timeTextSize="16sp"
+                        app:isTimeTextBold="true"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/flash_deals"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/flash_deals_text"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_margin="8dp"
+                    android:background="@drawable/rounded_card"
+                    android:padding="4dp"
+                    android:id="@+id/todays_deal_section"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/todays_deals_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="Today's Deal"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:layout_width="75dp"
+                        android:layout_height="3dp"
+                        android:layout_alignBottom="@id/todays_deals_text"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/colorPrimary" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/todays_deals"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/todays_deals_text"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/banner_1"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"/>
+
+                <RelativeLayout
+                    android:layout_margin="8dp"
+                    android:background="@drawable/rounded_card"
+                    android:padding="4dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/featured_products_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="Featured Products"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:layout_width="75dp"
+                        android:layout_height="3dp"
+                        android:layout_alignBottom="@id/featured_products_text"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/colorPrimary" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/featured_products"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/featured_products_text"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/banner_2"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"/>
+
+                <RelativeLayout
+                    android:layout_margin="8dp"
+                    android:background="@drawable/rounded_card"
+                    android:padding="4dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/best_selling_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="Best Selling"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:layout_width="75dp"
+                        android:layout_height="3dp"
+                        android:layout_alignBottom="@id/best_selling_text"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/colorPrimary" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/best_selling"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/best_selling_text"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                </RelativeLayout>
+
+                <!--                <com.kingfisher.easyviewindicator.AnyViewIndicator-->
+                <!--                    android:id="@+id/anyViewIndicator"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_gravity="center_horizontal"-->
+                <!--                    android:layout_marginTop="0dp"-->
+                <!--                    android:paddingBottom="10dp"-->
+                <!--                    android:gravity="center"-->
+                <!--                    app:avi_animation_enable="false"-->
+                <!--                    app:avi_drawable="@drawable/selected_radius"-->
+                <!--                    app:avi_drawable_unselected="@drawable/gray_radius"-->
+                <!--                    android:background="@color/cardview_light_background"-->
+                <!--                    app:avi_height="6dp"-->
+                <!--                    app:avi_margin="5dp"-->
+                <!--                    app:avi_orientation="horizontal"-->
+                <!--                    app:avi_width="6dp"-->
+                <!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+                <!--                    app:layout_constraintEnd_toEndOf="@id/best_selling"-->
+                <!--                    app:layout_constraintStart_toStartOf="@id/best_selling"-->
+                <!--                    app:layout_constraintTop_toBottomOf="@id/best_selling" />-->
+
+                <ImageView
+                    android:id="@+id/banner_3"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"/>
+
+                <RelativeLayout
+                    android:layout_margin="8dp"
+                    android:background="@drawable/rounded_card"
+                    android:padding="4dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/popular_brands_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="Our Popular Brands"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:layout_width="75dp"
+                        android:layout_height="3dp"
+                        android:layout_alignBottom="@id/popular_brands_text"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/colorPrimary" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/popular_brads"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/popular_brands_text"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/auction_product_section"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/auction_products_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="Auction Products"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:layout_width="75dp"
+                        android:layout_height="3dp"
+                        android:layout_alignBottom="@id/auction_products_text"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/colorPrimary" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/auction_products"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/auction_products_text"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+</ScrollView>

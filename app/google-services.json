@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "442934224344",
+    "project_id": "activeecommercecms",
+    "storage_bucket": "activeecommercecms.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:442934224344:android:8bc61b964d1fb287007ead",
+        "android_client_info": {
+          "package_name": "com.activeitzone.activeecommercecms"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "442934224344-8c1to424auh7m66j35i3q3j5abtqsgj6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0xb7oV5J-WCsMJKGBgg5UJIGFVVOliDM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "442934224344-8c1to424auh7m66j35i3q3j5abtqsgj6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
