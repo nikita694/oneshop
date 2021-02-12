@@ -71,7 +71,7 @@
                         android:layout_marginBottom="10dp"
                         android:text="Featured Categories"
                         android:textStyle="bold"
-                        android:textColor="@color/colorPrimary"
+                        android:textColor="#9C0D0D10"
                         android:textSize="20sp" />
 
                     <View

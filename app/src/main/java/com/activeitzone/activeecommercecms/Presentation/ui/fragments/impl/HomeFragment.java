@@ -68,6 +68,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import cn.iwgang.countdownview.CountdownView;
 
 public class HomeFragment extends Fragment implements HomeView, CategoryClickListener, BaseSliderView.OnSliderClickListener, ViewPagerEx.OnPageChangeListener, ProductClickListener, BrandClickListener, AuctionClickListener {
+
     private View v;
     List<SliderImage> sliderImages;
     private SliderLayout sliderLayout;
